@@ -1,1 +1,38 @@
 Matti Shirel
+TD1:Shapes
+
+Exercice1:
+
+1)car nous sommes à l'interieur de la classe 
+2)Ca ne marche pas, il faut mettre des accesseurs
+3)Pour ne pas que les autres classes y accedent.
+En effet, comme la classe et vouée a etre réutiliser il ne faut pas que d'autres fassent nimport quoi avec la classe.
+4) Un accesseur permet soit d'acceder à la varible pour avoir sa valeur, soit de la modifier. Oui on en a besoin ici.
+5)On a une erreur dans le main. Il faut rajouter des coordonnées quand on initialise un point.
+6)Il y a une erreur dans le constructeur car il y a le meme nom d'attribut de classe et de parametre.
+7) on crée un attribut statique pour la classe Point.
+8) Il regarde les types des arguments et prends celui de type egal ou le plus proche
+
+Exercice 2:
+1)L'egalite permet de comparer les references. Le point p1 et p2 ont la meme difference alors que p3; bien qu'il ait les memes coordonnées n'a pas la meme reference car il y a un autre new pour lui.
+3)On pense que le point p2 est dans la liste alors qu'il n'y ait pas. Par defaut, indexOf utilise l'égalité avec les reférences.
+On redefinit donc la methode equals qui appelle isSameAs
+
+Exercice 3:
+1)Si on depasse la capacite fixée on  a une exception: Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException
+On introduit donc un attribut privée indexOf qui neous permet de savoir ou nous sommes dans le remplissage de notre tableau et pouvoir tester à chaque remplissage si nous ne depassons pas la capacité du tableau.
+5)Exception pour le contains mais pas d'exception si on ajoute un null 
+6) pointCapacity ne sert plus à rien 
+nbPoints peut se remplacer en renvoyant la taille de la linkedList(index qui comptait le nombre d'element du tableau ne sert plus a rien) 
+Contains peut rester la meme. 
+
+
+Exercice4:
+5) Les deux points ont la meme reference vers point pour leur centre ce qui fait que quand on translate un cercle, l'autre cercle est aussi translater. C'est assez embetant!! Il faut donc mettre un new pour passer une nouvelle reference
+6) en translatant le point point on translate le cercle. Il faut donc renvoyer une nouvelle reference sur un nouveau point comportant les memes coordonnées que le centre .
+9)Oui car pas besoin d'instancier une nouvelle classepour l'utiliser.
+
+
+Exercice5:
+1) Oui, ca peut etre interressant car un anneau est aussi un cercle auquel on a enlever un cercle interne et tout ce qu'il y a dans la classe cercle peut aussi s'appliquer a un anneau.
+4) Ca nous affiche la reference de l'objet et pas l'objet en lui meme. Il faut rajouter la methode toString 
