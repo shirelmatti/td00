@@ -1,8 +1,8 @@
-package fr.dauphine.ja.mattishirel.shapes;
+package fr.dauphine.ja.mattishirel.model;
 
 import java.util.LinkedList;
 
-public class ligneBrisee {
+public class ligneBrisee extends Shapes {
 	private int maxP;
 	private LinkedList<Point> tab=new LinkedList<>();
 	private int index;
@@ -41,6 +41,10 @@ public class ligneBrisee {
 			
 		}
 		return false;
+	}
+	
+	public LinkedList<Point> takeList(){
+		return tab;
 	}
 	
 	

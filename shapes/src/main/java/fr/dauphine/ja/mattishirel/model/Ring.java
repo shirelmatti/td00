@@ -1,13 +1,13 @@
-package fr.dauphine.ja.mattishirel.shapes;
+package fr.dauphine.ja.mattishirel.model;
 
 import java.util.List;
 
-public class Ring extends Cercle{
+public class Ring extends Cercle  {
 	
-	private double rayonInterne;
+	private int rayonInterne;
 	
 	
-	public Ring(Point centre, double rayon, double rayonInterne) {
+	public Ring(Point centre, int rayon, int rayonInterne) {
 		super(centre,rayon);
 		if(rayonInterne<rayon){
 			this.rayonInterne = rayonInterne;
@@ -25,7 +25,7 @@ public class Ring extends Cercle{
 
 
 
-	public double getRayon() {
+	public int getRayon() {
 		return super.getRayon();
 	}
 
@@ -33,12 +33,12 @@ public class Ring extends Cercle{
 	
 
 
-	public double getRayonInterne() {
+	public int getRayonInterne() {
 		return rayonInterne;
 	}
 
 
-	public void setRayonInterne(double rayonInterne) {
+	public void setRayonInterne(int rayonInterne) {
 		this.rayonInterne = rayonInterne;
 	}
 	
@@ -66,13 +66,7 @@ public class Ring extends Cercle{
 				+ ", rayonInterne=" + rayonInterne + "]";
 	}
 	
-	public static void main(String[] args){
-		Ring r=new Ring(new Point(3,4),7,6);
-		Ring r2=new Ring(new Point(3,4),7,6);
-		System.out.println(r.equals(r2));
-		System.out.println(r);
-		
-	}
+	
 	
 	public boolean contains(Point p){
 		return super.contains(p);
@@ -81,8 +75,11 @@ public class Ring extends Cercle{
 	
 	
 	
-	public static boolean contains(Point tp,List<Cercle> l) {
-		return false;
+	public static boolean contains(Point tp,Ring...rings) {
+		for(Ring r:rings){
+			if(!r.contains(tp)) return false;
+		}
+		return true;
 		
 	}
 	

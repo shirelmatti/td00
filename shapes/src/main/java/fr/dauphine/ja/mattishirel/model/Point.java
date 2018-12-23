@@ -1,20 +1,20 @@
-package fr.dauphine.ja.mattishirel.shapes;
+package fr.dauphine.ja.mattishirel.model;
 
-public class Point {
-	private double x,y;
+public class Point extends Shapes {
+	private int  x,y;
 	private static int nbPoints=0;
 	
-	public Point(double x,double y){
+	public Point(int x,int y){
 		this.x=x;
 		this.y=y;
 		this.nbPoints++;
 	}
 	public Point(){
-		this.x=5.0;
-		this.y=7.0;
+		this.x=5;
+		this.y=7;
 		this.nbPoints++;
 	}
-	public double getX() {
+	public int getX() {
 		return x;
 	}
 	
@@ -24,15 +24,15 @@ public class Point {
 		this.nbPoints++;
 	}
 
-	public void setX(double x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 
-	public double getY() {
+	public int getY() {
 		return y;
 	}
 
-	public void setY(double y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 	
@@ -45,7 +45,7 @@ public class Point {
 		return (p.getX()==this.getX() && p.getY()==this.getY());
 	}
 	
-	public void translate(double dx, double dy){
+	public void translate(int dx, int dy){
 		setX(this.x+dx);
 		setY(this.y+dy);
 	}
@@ -59,8 +59,5 @@ public class Point {
 		
 	}
 
-	public static void main(String[] args) {
-		Point p=new Point(3,4);
-		System.out.println(p.x+" "+p.y);
-	}
+	
 }

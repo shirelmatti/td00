@@ -1,12 +1,12 @@
-package fr.dauphine.ja.mattishirel.shapes;
+package fr.dauphine.ja.mattishirel.model;
 
 import java.util.List;
 
-public class Cercle {
+public class Cercle extends Shapes {
 	private Point p;
-	private double rayon;
+	private int rayon;
 	
-	public Cercle(Point p, double rayon) {
+	public Cercle(Point p, int rayon) {
 		this.p = p;
 		this.rayon = rayon;
 	}
@@ -15,7 +15,7 @@ public class Cercle {
 		return "("+p+"///"+rayon+")";
 	}
 	
-	public void translate(double dx,double dy ) {
+	public void translate(int dx,int dy ) {
 		p.translate(dx, dy);
 	}
 	
@@ -23,7 +23,7 @@ public class Cercle {
 		return new Point(p.getX(),p.getY());
 	}
 	
-	public double getRayon(){
+	public int getRayon(){
 		return rayon;
 	}
 	
@@ -53,12 +53,12 @@ public class Cercle {
 	}
 	
 	
-	public static boolean contains(Point tp,List<Cercle> l) {
+	public static boolean contains(Point tp,Cercle...l) {
 		for(Cercle c: l) {
-			if(c.contains(tp)) return true; 
+			if(!(c.contains(tp))) return false; 
 		}
 		
-		return false;
+		return true;
 		
 	}
 	

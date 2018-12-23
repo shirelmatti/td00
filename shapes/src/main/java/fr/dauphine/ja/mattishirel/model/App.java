@@ -1,4 +1,4 @@
-package fr.dauphine.ja.mattishirel.shapes;
+package fr.dauphine.ja.mattishirel.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,9 +58,8 @@ public class App
 		
 		Cercle c=new Cercle(new Point(4,3), 3);
 		System.out.println(c.contains(new Point(4,6)));
-		List<Cercle> cercles=new ArrayList<>();
-		cercles.add(c);
-		System.out.println(Cercle.contains(new Point(4,6), cercles));
+		
+		System.out.println(Cercle.contains(new Point(4,6), c));
 		
 		
 		

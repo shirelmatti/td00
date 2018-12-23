@@ -36,3 +36,13 @@ Exercice4:
 Exercice5:
 1) Oui, ca peut etre interressant car un anneau est aussi un cercle auquel on a enlever un cercle interne et tout ce qu'il y a dans la classe cercle peut aussi s'appliquer a un anneau.
 4) Ca nous affiche la reference de l'objet et pas l'objet en lui meme. Il faut rajouter la methode toString 
+
+
+TD2:Shapes(Modele vue controlleur)
+
+Exercice1:
+
+5) La methode est appeler à chaque modification de JPanel.
+6) awt est arrivé le premier.
+awt fortement lié à l'os et pas swing.
+awt: pour la fenetre et Swing pour les composants.
